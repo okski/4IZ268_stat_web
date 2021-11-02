@@ -54,7 +54,13 @@ body {
 }
 
 a {
-    text-decoration: underline;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    padding-bottom: 2px;
+
+    border-width: 0 0 1px;
+    border-style: solid;
 }
 
 ol {
@@ -77,8 +83,9 @@ ol > li {
     visibility: hidden;
 }
 
-.dropdown-content a:hover {
+a:hover {
     background-color: #ea95b8;
+    border-style: none;
 }
 
 .dropdown:hover .dropdown-content {
