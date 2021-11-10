@@ -51,52 +51,164 @@ a {
 /* My styles */
 body {
     font-size: 1em;
+    font-family: "Times New Roman", Arial, Times, serif;
+    margin-left: 1em;
+}
+
+polygon {
+    fill:black;
+    stroke-width:1;
 }
 
 a {
     width: 100%;
     left: 0;
     bottom: 10px;
-    padding-bottom: 2px;
+    padding: 2px 4px 2px 4px;
 
     border-width: 0 0 1px;
     border-style: solid;
 }
 
-ol {
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #90baca;
+}
+
+nav ol {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: space-around;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-ol > li {
+nav ol > li {
     padding: 5px;
-    line-height: 50px;
+    line-height: 25px;
     font-weight: bold;
     text-align: center;
 }
 
-.dropdown-content {
-    visibility: hidden;
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #90baca;
 }
 
-a:hover {
+nav a:hover, .breadcrumb_div a:hover {
     background-color: #ea95b8;
     border-style: none;
 }
 
-.dropdown:hover .dropdown-content {
-    visibility: visible;
+nav .dropdown:hover .dropdown-content {
+    display: block;
     box-sizing: border-box;
+
 }
 
-svg {
+nav svg {
     margin-left: 10px;
 }
 
-.dropdown:hover svg {
+nav .dropdown:hover svg {
     transform: rotate(90deg);
+}
+
+.breadcrumb_div {
+    margin-top: 3em;
+}
+
+.breadcrumb_ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb_li {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 1em;
+}
+
+a + p {
+    margin-left: 1em;
+}
+
+h1 {
+    margin: 0.5em 0 0.25em 0.1em;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin: 0.5em;
+}
+
+.information {
+    overflow: visible;
+}
+
+.infobox {
+    padding-left: 0.5em;
+    height: 100%;
+}
+
+.infobox h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    border-width: 0 0 1px;
+    border-color: grey;
+    border-style: solid;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.content h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.contents {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+    display: table;
+    background-color: #c9c9c9;
+}
+
+.contents h2 {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+.contents a {
+    border-style: none;
+}
+
+.contents li {
+    margin: 0.5em;
+}
+
+.contents ol {
+    counter-reset: item
+}
+
+.contents li:before {
+    content: counters(item, ".") ".";
+    counter-increment: item
 }
