@@ -130,11 +130,11 @@ nav .dropdown:hover svg {
 .breadcrumb_li {
     display: inline-flex;
     align-items: center;
-    margin-left: 1em;
 }
 
-a + p {
+.arrow {
     margin-left: 1em;
+    margin-right: 1em;
 }
 
 h1 {
@@ -151,12 +151,13 @@ h1 {
 }
 
 .information {
-    overflow: visible;
+    /*margin-right: auto;*/
 }
 
 .infobox {
     padding-left: 0.5em;
-    height: 100%;
+    float: right;
+    max-height: 50%;
 }
 
 .infobox h2 {
@@ -168,9 +169,8 @@ h1 {
 .content h2 {
     font-size: 1.5em;
     font-weight: bold;
-    border-width: 0 0 1px;
-    border-color: grey;
-    border-style: solid;
+    border-bottom: 1px solid;
+    overflow: hidden;
     margin-top: 0.5em;
     margin-bottom: 0.25em;
 }
