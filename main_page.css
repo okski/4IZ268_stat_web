@@ -15,15 +15,11 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font: inherit;
-    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
-}
-body {
-    line-height: 1;
 }
 ol, ul {
     list-style: none;
@@ -91,7 +87,6 @@ nav ol {
 
 nav ol > li {
     margin: 5px;
-    line-height: 25px;
     font-weight: bold;
     text-align: center;
 }
@@ -133,6 +128,10 @@ nav .dropdown:hover svg {
 
 nav a {
     margin: 5px 0 5px 0;
+}
+
+.active {
+    background-color: beige;
 }
 
 .breadcrumb_div {
@@ -222,32 +221,34 @@ h1 {
 }
 
 .infobox h2 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 1em;
     border: none;
 }
 
 .header {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1em;
     background-color: aliceblue;
-    font-size: 1.25em;
-}
-
-td {
-    padding-top: 0.5em;
-    padding-bottom: 0.25em;
 }
 
 .table_img {
-    line-height: 0;
-    padding: 0 0 0 0;
-}
-
-.table_img img {
+    display: block;
     max-width: 250px;
     height: auto;
 }
 
-.active {
-    background-color: beige;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px 10px;
 }
+
+.gallery img {
+    /*flex: 1 100%;*/
+    /*height: auto;*/
+
+    max-height: 250px;
+    width: auto;
+}
+
