@@ -61,7 +61,10 @@
 
 .slide {
     height: 100%;
-    text-align: center;
+    /*text-align: center;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*.mySlides {*/
@@ -124,7 +127,7 @@
     font-size: 1.5em;
     position: absolute;
     top: 0;
-    padding: 8px 12px;
+    left: 25px;
 }
 
 /* Number text (1/3 etc) */
@@ -139,10 +142,11 @@
 
 
 .slide img {
-    max-width: 95%;
+    position: absolute;
+    max-width: 90%;
+    max-height: 85%;
     width: auto;
     height: auto;
-    max-height: 90%;
 
 }
 
