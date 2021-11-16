@@ -245,10 +245,13 @@ h1 {
 }
 
 .gallery img {
-    /*flex: 1 100%;*/
-    /*height: auto;*/
-
     max-height: 250px;
     width: auto;
+}
+
+.gallery img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
