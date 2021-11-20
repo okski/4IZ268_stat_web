@@ -48,6 +48,7 @@ a {
 body {
     font-size: 1em;
     font-family: "Times New Roman", Arial, Times, serif;
+    counter-reset: h2counter;
 }
 
 polygon {
@@ -60,22 +61,27 @@ a {
     left: 0;
     bottom: 10px;
     padding: 0 4px 1px 4px;
+}
 
-    border-width: 0 0 1px;
+a:hover {
+    border-width: 0 0 2px;
     border-style: solid;
 }
 
 h1 {
-    margin-top: 3em;
+    margin: 0.5em 0 0.25em 0.4em;
+    font-weight: bold;
+    font-size: 2.5em;
 }
 
 line {
     stroke-width: 3;
 }
 
+/* Navigation */
 nav {
-    position: fixed;
-    top: 0;
+    /*position: fixed;*/
+    /*top: 0;*/
     width: 100%;
     background-color: #90baca;
 }
@@ -110,7 +116,7 @@ nav .dropdown-content {
 }
 
 nav a:hover, .breadcrumb_div a:hover {
-    border-style: none;
+    /*border-style: none;*/
 }
 
 nav li:hover, .breadcrumb_div a:hover {
@@ -138,9 +144,9 @@ nav a {
     background-color: beige;
 }
 
+/* Bread crumb navigation */
 .breadcrumb_div {
-    margin-top: 3em;
-    margin-left: 1em;
+    margin: 1em 0 1em 1em;
 }
 
 .breadcrumb_ul {
@@ -158,18 +164,48 @@ nav a {
     margin-right: 1em;
 }
 
-h1 {
-    margin: 1em 0 0.25em 0.4em;
-    font-weight: bold;
-    font-size: 2.5em;
-}
-
+/* Content */
 .content {
     display: flex;
     flex-flow: row;
     margin-left: 1em;
 }
 
+.content h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    overflow: hidden;
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+
+/*.numbered_h2 {*/
+/*    padding-top: 32px;*/
+/*}*/
+
+.numbered_h2:before {
+    content: counters(h2counter, ".") ". ";
+    counter-increment: h2counter;
+    counter-reset: h3counter
+}
+
+.content h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+
+/*.numbered_h3 {*/
+/*    padding-top: 32px;*/
+/*}*/
+
+.numbered_h3:before {
+    content: counter(h2counter) "." counter(h3counter) ". ";
+    counter-increment: h3counter;
+}
+
+    /* Information box */
 .infobox {
     margin-left: 1em;
     margin-right: 1em;
@@ -177,22 +213,32 @@ h1 {
     background-color: #aacaff;
 }
 
-.content h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    border-bottom: 1px solid;
-    overflow: hidden;
-    margin-top: 0.5em;
-    margin-bottom: 0.25em;
+.infobox h2 {
+    border: none;
 }
 
-.content h3 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 0.5em;
-    margin-bottom: 0.25em;
+.header {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1em;
+    background-color: aliceblue;
 }
 
+td {
+    padding: 5px 0 5px 0;
+}
+
+.td_img {
+    padding: 0;
+}
+
+.table_img {
+    display: block;
+    max-width: 250px;
+    height: auto;
+}
+
+    /* Summary contents */
 .contents {
     margin-top: 0.5em;
     margin-bottom: 0.25em;
@@ -224,26 +270,9 @@ h1 {
     counter-increment: item
 }
 
-.infobox h2 {
-    border: none;
-}
 
-.header {
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1em;
-    background-color: aliceblue;
-}
 
-.table_img {
-    display: block;
-    max-width: 250px;
-    height: auto;
-}
 
-td {
-    padding: 5px 0 5px 0;
-}
 
 .gallery {
     display: flex;
