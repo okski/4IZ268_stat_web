@@ -172,7 +172,7 @@ nav a {
 }
 
 .content h2 {
-    font-size: 1.5em;
+    font-size: 1.75em;
     font-weight: bold;
     overflow: hidden;
     margin-top: 1em;
@@ -215,6 +215,7 @@ nav a {
 
 .infobox h2 {
     border: none;
+    font-size: 1.25em;
 }
 
 .header {
@@ -225,7 +226,7 @@ nav a {
 }
 
 td {
-    padding: 5px 0 5px 0;
+    padding: 5px 10px 5px 10px;
 }
 
 .td_img {
@@ -262,12 +263,12 @@ td {
 }
 
 .contents ol {
-    counter-reset: item
+    counter-reset: item;
 }
 
 .contents li:before {
     content: counters(item, ".") ".";
-    counter-increment: item
+    counter-increment: item;
 }
 
 
@@ -287,7 +288,6 @@ td {
     max-width: 500px;
     width: auto;
     height: auto;
-    cursor: pointer;
 }
 
 .gallery img:hover {

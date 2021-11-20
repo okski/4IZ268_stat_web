@@ -1,0 +1,40 @@
+.contents li:before {
+    content: none;
+}
+
+.gallery img {
+    max-height: 600px;
+    max-width: 400px;
+    width: auto;
+    height: auto;
+}
+
+.gallery img:hover {
+    opacity: 1;
+    cursor: default;
+}
+
+.gallery h3 {
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.gallery ol {
+    margin-left: 25%;
+    list-style-type: decimal;
+}
+
+table {
+    display: table;
+    padding: 5px 0 5px 0;
+}
+
+.year_hide {
+    display: none;
+}
+
+/*.gallery p {*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*    font-size: 1.5em;*/
+/*}*/
