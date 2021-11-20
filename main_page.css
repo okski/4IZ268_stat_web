@@ -279,6 +279,7 @@ td {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 10px 10px;
+    margin-bottom: 1em;
 }
 
 .gallery img {
