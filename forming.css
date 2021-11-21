@@ -1,0 +1,16 @@
+.contents div, .contents ol {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.contents li:before {
+    content: none;
+}
+
+.year_hide {
+    display: none;
+}
+
+.content p {
+    margin-bottom: 0.5em;
+}

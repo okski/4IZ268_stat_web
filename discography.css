@@ -1,9 +1,14 @@
+.contents div, .contents ol {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 .contents li:before {
     content: none;
 }
 
 .gallery img {
-    max-height: 600px;
+    max-height: 400px;
     max-width: 400px;
     width: auto;
     height: auto;
@@ -14,14 +19,22 @@
     cursor: default;
 }
 
+div[id^="year_20"] h2 {
+    font-size: 2em;
+}
+
 .gallery h3 {
-    font-size: 1.25em;
     text-align: center;
 }
 
 .gallery ol {
+    margin-top: 1em;
     margin-left: 25%;
     list-style-type: decimal;
+}
+
+.gallery li {
+    padding-bottom: 0.5em;
 }
 
 table {

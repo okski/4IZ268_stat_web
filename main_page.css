@@ -64,8 +64,10 @@ a {
 }
 
 a:hover {
-    border-width: 0 0 2px;
-    border-style: solid;
+    text-decoration: underline;
+    padding-bottom: 1px;
+    /*border-width: 0 0 2px;*/
+    /*border-style: solid;*/
 }
 
 h1 {
@@ -96,7 +98,7 @@ nav ol {
 }
 
 nav ol > li {
-    margin: 5px;
+    padding: 5px;
     font-weight: bold;
     text-align: center;
 }
@@ -113,10 +115,6 @@ nav .dropdown-content {
     display: none;
     position: absolute;
     background-color: #90baca;
-}
-
-nav a:hover, .breadcrumb_div a:hover {
-    /*border-style: none;*/
 }
 
 nav li:hover, .breadcrumb_div a:hover {
@@ -166,8 +164,8 @@ nav a {
 
 /* Content */
 .content {
-    display: flex;
-    flex-flow: row;
+    /*display: flex;*/
+    /*flex-flow: row;*/
     margin-left: 1em;
 }
 
@@ -178,10 +176,6 @@ nav a {
     margin-top: 1em;
     margin-bottom: 0.25em;
 }
-
-/*.numbered_h2 {*/
-/*    padding-top: 32px;*/
-/*}*/
 
 .numbered_h2:before {
     content: counters(h2counter, ".") ". ";
@@ -195,10 +189,6 @@ nav a {
     margin-top: 1em;
     margin-bottom: 0.25em;
 }
-
-/*.numbered_h3 {*/
-/*    padding-top: 32px;*/
-/*}*/
 
 .numbered_h3:before {
     content: counter(h2counter) "." counter(h3counter) ". ";
@@ -254,10 +244,6 @@ td {
     padding-bottom: 0.25em;
 }
 
-.contents a {
-    border-style: none;
-}
-
 .contents li {
     margin: 0.5em;
 }
@@ -270,9 +256,6 @@ td {
     content: counters(item, ".") ".";
     counter-increment: item;
 }
-
-
-
 
 
 .gallery {
