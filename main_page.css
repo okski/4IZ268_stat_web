@@ -144,7 +144,7 @@ nav a {
 
 /* Bread crumb navigation */
 .breadcrumb_div {
-    margin: 1em 0 1em 1em;
+    margin: 0.5em 0 0 1em;
 }
 
 .breadcrumb_ul {
@@ -175,12 +175,12 @@ nav a {
     overflow: hidden;
     margin-top: 1em;
     margin-bottom: 0.25em;
+    counter-reset: h3counter;
 }
 
 .numbered_h2:before {
     content: counters(h2counter, ".") ". ";
     counter-increment: h2counter;
-    counter-reset: h3counter
 }
 
 .content h3 {
@@ -195,6 +195,28 @@ nav a {
     counter-increment: h3counter;
 }
 
+.content p {
+    margin-bottom: 0.5em;
+}
+
+.content ul {
+    margin-bottom: 1em;
+    margin-left: 5%;
+    list-style-type: initial;
+}
+
+.pets {
+    display: block;
+    text-align: center;
+}
+
+.pets img {
+    max-width: 300px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+}
+
     /* Information box */
 .infobox {
     margin-left: 1em;
@@ -206,6 +228,7 @@ nav a {
 .infobox h2 {
     border: none;
     font-size: 1.25em;
+    margin-top: 0.5em;
 }
 
 .header {
@@ -227,6 +250,8 @@ td {
     display: block;
     max-width: 250px;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
     /* Summary contents */
